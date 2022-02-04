@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.chees{
+			height: 15px;
+		}
+	</style>
+</head>
+<body style="background-image: url(bg.jfif); background-size: 100%; margin: 0px; display: flex;">
+	<div style="background: #FABC07; height: 250px; width: 200px; text-align: center; font-family: Arial;">
+		<h2 style="margin: 0px;" class="a">Найди 6 сыра</h2>
+		<h1>Очки:</h1>
+		<h1 style="color: red;"><span class="score">0</span></h1>
+	</div>
+	<img src="chees.png" class="chees img1" style="margin-top: 310px;">
+	<img src="chees.png" class="chees img2" style="margin-top: 260px; margin-left: 350px;">
+	<img src="chees.png" class="chees img3" style="margin-top: 550px; margin-left: 500px;">
+	<img src="chees.png" class="chees img4" style="margin-top: 320px; margin-left: 70px;">
+	<img src="chees.png" class="chees img5" style="margin-top: 190px; margin-left: 300px;">
+	<img src="chees.png" class="chees img6" style="margin-top: 530px; margin-left: 860px;">
+	<script type="text/javascript">
+		let score = 0
+		document.querySelector(".img2").style.display = "none"
+		document.querySelector(".img3").style.display = "none"
+		document.querySelector(".img4").style.display = "none"
+		document.querySelector(".img5").style.display = "none"
+		document.querySelector(".img6").style.display = "none"
+		document.querySelector(".img1").onclick = function(){
+			score = score + 1
+			document.querySelector(".score").innerHTML = score
+			alert("Молодец!")
+			document.querySelector(".img1").style.display = "none"
+			document.querySelector(".img2").style.display = ""
+		}
+		document.querySelector(".img2").onclick = function(){
+			score = score + 1
+			document.querySelector(".score").innerHTML = score
+			alert("Так держать!")
+			document.querySelector(".img2").style.display = "none"
+			document.querySelector(".img3").style.display = ""
+		}
+		document.querySelector(".img3").onclick = function(){
+			score = score + 1
+			document.querySelector(".score").innerHTML = score
+			alert("Хорошо справляешься!")
+			document.querySelector(".img3").style.display = "none"
+			document.querySelector(".img4").style.display = ""
+		}
+		document.querySelector(".img4").onclick = function(){
+			score = score + 1
+			document.querySelector(".score").innerHTML = score
+			alert("Отлично!")
+			document.querySelector(".img4").style.display = "none"
+			document.querySelector(".img5").style.display = ""
+		}
+		document.querySelector(".img5").onclick = function(){
+			score = score + 1
+			document.querySelector(".score").innerHTML = score
+			alert("Давай остался последний!")
+			document.querySelector(".img5").style.display = "none"
+			document.querySelector(".img6").style.display = ""
+		}
+		document.querySelector(".img6").onclick = function(){
+			score = score + 1
+			document.querySelector(".score").innerHTML = score
+			alert("Молодец ты нашёл все 6!")
+			document.querySelector(".img6").style.display = "none"
+			document.querySelector(".a").style.textDecoration = "line-through"
+		}
+	</script>
+</body>
+</html>
